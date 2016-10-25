@@ -13,7 +13,8 @@ angular.module('contatooh').controller('ContatoController',
           console.log(erro);
         }
       );
-    } else {
+    }
+    else {
       $scope.contato = new Contato();
     }
 
