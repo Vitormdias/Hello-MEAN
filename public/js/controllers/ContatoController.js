@@ -8,7 +8,7 @@ angular.module('contatooh').controller('ContatoController',
         },
         function(erro) {
           $scope.mensagem = {
-          texto: 'Não foi possível obter o contato.'
+            texto: 'Não foi possível obter o contato.'
           };
           console.log(erro);
         }
@@ -29,4 +29,8 @@ angular.module('contatooh').controller('ContatoController',
         $scope.mensagem = {texto: 'Não foi possível salvar'};
       });
     };
+
+    Contato.query(function(contatos) {
+			$scope.contatos = contatos;
+    });
 });
