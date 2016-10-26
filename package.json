@@ -15,7 +15,8 @@
     "express": "^4.8.8",
     "express-load": "^1.1.15",
     "method-override": "^2.1.3",
-    "mongodb": "^1.4.40"
+    "mongodb": "^1.4.40",
+    "mongoose": "^3.8.40"
   },
   "repository": {
     "type": "git",
