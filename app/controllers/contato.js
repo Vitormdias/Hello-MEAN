@@ -1,25 +1,5 @@
 var model = require('../models/contato');
 
-var contatos = [
-  {
-    _id: 1,
-    nome: 'Contato Exemplo 1',
-    email: 'cont1@empresa.com.br'
-  },
-  {
-    _id: 2,
-    nome: 'Contato Exemplo 2',
-    email: 'cont2@empresa.com.br'
-  },
-  {
-    _id: 3,
-    nome: 'Contato Exemplo 3',
-    email: 'cont3@empresa.com.br'
-  }
-];
-
-var ID_CONTATO_INC = 3;
-
 module.exports = function(app) {
   var Contato = app.models.contato;
 
@@ -45,6 +25,7 @@ module.exports = function(app) {
     .then(
       function(contato) {
         if(!contato) throw new Error("Contato não encontrado");
+        res.json(contato);
       },
       function(erro) {
         console.log(erro);
@@ -77,7 +58,7 @@ module.exports = function(app) {
         },
         function(erro) {
           console.log(erro);
-          res.status(500);
+          res.status(500).json(erro);
         }
       );
     } else {
