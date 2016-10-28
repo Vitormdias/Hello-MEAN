@@ -28,5 +28,10 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/vitormdias/MEAN.git"
+  },
+  "devDependencies": {
+    "karma": "^0.12.37",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.0.2"
   }
 }
